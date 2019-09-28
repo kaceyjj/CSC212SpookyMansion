@@ -12,6 +12,8 @@ import java.util.List;
  */
 public class InteractiveFiction {
 
+	private static Place here;
+
 	/**
 	 * This method actually plays the game.
 	 * @param input - a helper object to ask the user questions.
@@ -43,7 +45,7 @@ public class InteractiveFiction {
 			// Game over after print!
 			if (here.isTerminalState()) {
 				break;
-			}
+			
 
 			// Show a user the ways out of this place.
 			List<Exit> exits = here.getVisibleExits();
