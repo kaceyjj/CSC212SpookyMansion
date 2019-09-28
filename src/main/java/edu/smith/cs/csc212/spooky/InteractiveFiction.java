@@ -79,6 +79,7 @@ public class InteractiveFiction {
 				} else {
 					continue;
 				}
+	
 				
 				if (action.equals("escape")) {
 					if (input.confirm("Are you sure you want to quit?")) {
@@ -108,10 +109,16 @@ public class InteractiveFiction {
 			place = destination.getTarget();
 		}
 
-		return place;
+			return place; 
+			}
 			
 		}
-	}
+		
+			
+
+	
+
+	
 
 	/**
 	 * This is where we play the game.
