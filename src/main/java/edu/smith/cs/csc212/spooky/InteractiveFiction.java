@@ -31,8 +31,15 @@ public class InteractiveFiction {
 			
 			System.out.println();
 			System.out.println("... --- ...");
+			System.out.println("place="+place);
+			System.out.println("here="+here);
 			System.out.println(here.getDescription());
-
+			if (here.hasVisited()== true) {
+				System.out.println("This place feels familiar...");
+			}
+			here.visit();
+			
+			}
 			// Game over after print!
 			if (here.isTerminalState()) {
 				break;
@@ -64,7 +71,22 @@ public class InteractiveFiction {
 					continue;
 				}
 			}
-
+			if (action.equals("q")) {
+				if (input.confirm("Are you sure you want to quit?")) {
+					return place;
+				} else {
+					continue;
+				}
+				
+				if (action.equals("escape")) {
+					if (input.confirm("Are you sure you want to quit?")) {
+						return place;
+					} else {
+						continue;
+					}
+				if (action.contentEquals("help")) {
+					System.out.println("Please enter a number between 0,1,2 or type \"quit\" to quit the game");
+				}
 			// From here on out, what they typed better be a number!
 			Integer exitNum = null;
 			try {
@@ -85,6 +107,8 @@ public class InteractiveFiction {
 		}
 
 		return place;
+			
+		}
 	}
 
 	/**

@@ -26,6 +26,10 @@ public class Place {
 	 * Whether reaching this place ends the game.
 	 */
 	private boolean terminal;
+	/* Whether we have been there or not.
+	 * 
+	 */
+	private boolean visited = false;
 	
 	/**
 	 * Internal only constructor for Place. Use {@link #create(String, String)} or {@link #terminal(String, String)} instead.
@@ -83,7 +87,14 @@ public class Place {
 		}
 		return visible;
 	}
+	/** This lets us track whether a player has visited this Place before.
 	
+	public boolean hasVisited() {
+		return this.visited;
+	}
+	public void visit() {
+		this.visited = true;
+	}
 	/**
 	 * This is a terminal location (good or bad).
 	 * @param id - this is the id of the place (for creating {@link Exit} objects that go here).
@@ -125,6 +136,16 @@ public class Place {
 		if (other instanceof Place) {
 			return this.id.equals(((Place) other).id);
 		}
+		return false;
+	}
+
+	public void visit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public boolean hasVisited() {
+		// TODO Auto-generated method stub
 		return false;
 	}
 	
