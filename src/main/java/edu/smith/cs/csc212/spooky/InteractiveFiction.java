@@ -110,13 +110,11 @@ public class InteractiveFiction {
 		}
 
 			return place; 
+			
 			}
 			
-		}
-		
 			
-
-	
+		
 
 	
 
