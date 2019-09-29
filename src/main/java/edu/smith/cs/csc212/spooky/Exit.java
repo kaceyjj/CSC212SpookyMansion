@@ -76,4 +76,9 @@ public class Exit {
 		}
 		return false;
 	}
+	
+	public boolean isSecret() {
+		
+		
+	}
 }

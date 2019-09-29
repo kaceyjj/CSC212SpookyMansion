@@ -114,9 +114,6 @@ public class InteractiveFiction {
 			}
 			
 			
-		
-
-	
 
 	/**
 	 * This is where we play the game.
